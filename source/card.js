@@ -477,7 +477,7 @@ var Card = {
 	//
 	hashtagsFromTitle: function (title) {
 		var hashtags = [];
-		var regexp = /#([\w-]+)/g;
+		var regexp = /#([\S-]+)/g;
 		var result = regexp.exec(title);
 		while (result != null) {
 			hashtags.push(result[1]);
